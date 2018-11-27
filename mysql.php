@@ -19,7 +19,7 @@ function redirect($uri) {
 }
 
 mysql_connect('localhost','root','');
-if(mysql_select_db('data')){
+if(mysql_select_db('database')){
     echo "db selected";
 }else
 echo "no";
