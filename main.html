@@ -32,6 +32,7 @@
         function checkLoginState() {
             FB.getLoginStatus(function(response) {
                 statusChangeCallback(response);
+                window.location.href = "loggedin.php";
             });
         }
 
@@ -57,6 +58,9 @@
             // These three cases are handled in the callback function.
 
             FB.getLoginStatus(function(response) {
+                if (response.status === 'connected') {
+                    console.log(response.authResponse.accessToken);
+                }
                 statusChangeCallback(response);
             });
 
