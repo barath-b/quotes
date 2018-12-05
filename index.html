@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+</head>
+<style>
+    .grid-item {
+        transition: all 120ms ease;
+        margin: 3%;
+    }
+    
+    .column {
+        float: left;
+        transition: all 120ms ease;
+    }
+    
+    .size-1of4 {
+        width: 25%;
+    }
+    
+    .size-1of3 {
+        width: 33.333%;
+    }
+    
+    .size-1of2 {
+        width: 50%;
+    }
+    /* Configurate salvattore with media queries */
+    
+    @media screen and (max-width: 450px) {
+        #grid[data-columns]::before {
+            content: '1 .column';
+        }
+    }
+    
+    @media screen and (min-width: 451px) and (max-width: 700px) {
+        #grid[data-columns]::before {
+            content: '2 .column.size-1of2';
+        }
+    }
+    
+    @media screen and (min-width: 701px) and (max-width: 850px) {
+        #grid[data-columns]::before {
+            content: '3 .column.size-1of3';
+        }
+    }
+    
+    @media screen and (min-width: 851px) {
+        #grid[data-columns]::before {
+            content: '4 .column.size-1of4';
+        }
+    }
+</style>
+
+<body>
+    <div class="grid" id="grid" data-columns>
+        <!--<div class="grid-item">
+            <blockquote class="blockquote">
+                <p id="a" class="mb-0">Be yourself; everyone else is already taken.</p>
+                <footer class="blockquote-footer"> Oscar Wilde</footer>
+                <button class="btn" data-clipboard-action="copy" data-clipboard-target="#a">Copy</button>
+            </blockquote>
+            <div class="tags">
+                <p>Tags : <em>life</em></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <blockquote class="blockquote">
+                <p class="mb-0">Life is 10% what happens to you and 90% how you react to it.</p>
+                <footer class="blockquote-footer"> Oscar Wilde</footer>
+            </blockquote>
+            <div class="tags">
+                <p>Tags : <em>life</em></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <blockquote class="blockquote">
+                <p class="mb-0">One of the most beautiful qualities of true friendship is to understand and to be understood.</p>
+                <footer class="blockquote-footer"> Oscar Wilde</footer>
+            </blockquote>
+            <div class="tags">
+                <p>Tags : <em>life</em></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <blockquote class="blockquote">
+                <p class="mb-0">Be yourself; everyone else is already taken.</p>
+                <footer class="blockquote-footer"> Oscar Wilde</footer>
+            </blockquote>
+            <div class="tags">
+                <p>Tags : <em>life</em></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <blockquote class="blockquote">
+                <p class="mb-0">Be yourself; everyone else is already taken.</p>
+                <footer class="blockquote-footer"> Oscar Wilde</footer>
+            </blockquote>
+            <div class="tags">
+                <p>Tags : <em>life</em></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <blockquote class="blockquote">
+                <p class="mb-0">Life is 10% what happens to you and 90% how you react to it.</p>
+                <footer class="blockquote-footer"> Oscar Wilde</footer>
+            </blockquote>
+            <div class="tags">
+                <p>Tags : <em>life</em></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <blockquote class="blockquote">
+                <p class="mb-0">One of the most beautiful qualities of true friendship is to understand and to be understood.</p>
+                <footer class="blockquote-footer"> Oscar Wilde</footer>
+            </blockquote>
+            <div class="tags">
+                <p>Tags : <em>life</em></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <blockquote class="blockquote">
+                <p class="mb-0">Be yourself; everyone else is already taken.</p>
+                <footer class="blockquote-footer"> Oscar Wilde</footer>
+            </blockquote>
+            <div class="tags">
+                <p>Tags : <em>life</em></p>
+            </div>
+        </div> -->
+
+    </div>
+    <script src="js/salva.js"></script>
+    <script src="js/clipboard.js"></script>
+</body>
+<script>
+    var content = [];
+    var btns;
+    var $con = null;
+    var grid = document.querySelector('#grid');
+    $(document).ready(function() {
+        $.getJSON("data.json", function(data) {
+            $.each(data, function(key, value) {
+                for (let i = 0; i < value.length; i++) {
+                    content += '<div class="grid-item"><div>' +
+                        '<blockquote class="blockquote">' +
+                        '<p class="mb-0">' + value[i].con + '</p>' +
+                        '<footer class="blockquote-footer">' + value[i].saidby + '</footer>' +
+                        '<button class="btn" data-clipboard-action="copy" data-clipboard-text=="#' + value[i].con + '">Copy</button></blockquote>' +
+                        '<div class="tags">' +
+                        '<p>Tags : <em>' + 'life' + '</em></p></div></div></div>';
+                }
+                $('#grid').append(content);
+                $con = $(content);
+                salvattore.recreateColumns(grid);
+            });
+        });
+
+        new Clipboard(".btn", {
+            text: function(trigger) {
+                return $(trigger).parent().find('p').first().text().trim();
+            }
+        });
+    });
+</script>
+
+</html>
