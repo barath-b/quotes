@@ -73,17 +73,19 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-itemc active">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
                     <a class="nav-link" href="">Movie</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="series.html">Series</a>
                 </li>
+                <li class="nav-item stat">
+                    <p id="status" class="nav-link"></p>
+                </li>
                 <li class="nav-item">
                     <fb:login-button id="fb" class="nav-link" scope="public_profile,email" autologoutlink="true" onlogin="checkLoginState();">
                     </fb:login-button>
-                    <p id="status" class="nav-link"></p>
                 </li>
             </ul>
         </div>

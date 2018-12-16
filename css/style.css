@@ -7,8 +7,11 @@ ul.navbar-nav {
 }
 
 #status {
-    display: none;
     margin: 0;
+}
+
+.stat {
+    display: none;
 }
 
 .head {
