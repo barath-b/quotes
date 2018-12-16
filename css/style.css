@@ -1,0 +1,103 @@
+.navbar-brand {
+    margin-left: 5%
+}
+
+ul.navbar-nav {
+    padding-right: 5%!important;
+}
+
+#id {
+    display: none;
+}
+
+.head {
+    font-size: 300%;
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 0.5%;
+}
+
+.btn {
+    margin-top: 6%;
+}
+
+.grid {
+    margin-right: 3%;
+}
+
+.grid-item {
+    transition: all 120ms ease;
+    margin: 3%;
+}
+
+.item {
+    background-color: #FCFCFC;
+    margin: 10%;
+    padding: 7%;
+    border-radius: 2%;
+    margin-right: 0;
+    box-shadow: 1px 1px 4px 0px #777;
+}
+
+.cat {
+    margin-top: 8%;
+    font-size: 80%;
+}
+
+.blockquote-footer {
+    margin-top: 2%;
+    font-size: 65%;
+}
+
+.blockquote {
+    margin-bottom: 0;
+    color: #161616;
+}
+
+.column {
+    float: left;
+    transition: all 120ms ease;
+}
+
+.size-1of4 {
+    width: 25%;
+}
+
+.size-1of3 {
+    width: 33.333%;
+}
+
+.size-1of2 {
+    width: 50%;
+}
+
+.size-1of1 {
+    width: 100%;
+}
+
+
+/* Configurate salvattore with media queries */
+
+@media screen and (max-width: 450px) {
+    #grid[data-columns]::before {
+        content: '1 .column.size-1of1';
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 700px) {
+    #grid[data-columns]::before {
+        content: '2 .column.size-1of2';
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 850px) {
+    #grid[data-columns]::before {
+        content: '3 .column.size-1of3';
+    }
+}
+
+@media screen and (min-width: 851px) {
+    #grid[data-columns]::before {
+        content: '4 .column.size-1of4';
+    }
+}

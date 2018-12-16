@@ -1,0 +1,228 @@
+{
+    "quote": [{
+            "con": "Alright everyone: Chill!",
+            "cat": "Movies",
+            "saidby": "Batman & Robin"
+        },
+        {
+            "con": "Apes together strong.",
+            "cat": "Movies",
+            "saidby": "Rise of the Planet of the Apes"
+        },
+        {
+            "con": "By Grabthar’s hammer, by the suns of Worvan, you shall be avenged.",
+            "cat": "Movies",
+            "saidby": "Galaxy Quest"
+        },
+        {
+            "con": "Chewie, we’re home.",
+            "cat": "Movies",
+            "saidby": "Star Wars: The Force Awakens"
+        },
+        {
+            "con": "God creates dinosaurs. God destroys dinosaurs. God creates man. Man destroys god. Man creates dinosaurs./Dinosaurs eat man. Woman inherits the earth.",
+            "cat": "Movies",
+            "saidby": "Jurassic Park"
+        }, {
+            "con": "I am Groot.",
+            "cat": "Movies",
+            "saidby": "Guardians of the Galaxy"
+        },
+        {
+            "con": "I see dead people.",
+            "cat": "Movies",
+            "saidby": "The Sixth Sense"
+        },
+        {
+            "con": "I volunteer as tribute!",
+            "cat": "Movies",
+            "saidby": "The Hunger Games"
+        },
+        {
+            "con": "So do all who live to see such times, but that is not for them to decide. All you have to decide is what to do with the time that is given to you",
+            "cat": "Movies",
+            "saidby": "LOTR: Fellowship of the Ring"
+        },
+        {
+            "con": "I’m a leaf on the wind.",
+            "cat": "Movies",
+            "saidby": "Serenity"
+        },
+        {
+            "con": "I am one with the Force, the Force is with me.",
+            "cat": "Movies",
+            "saidby": "Rogue One"
+        },
+        {
+            "con": "It’s kind of exciting, isn’t it? Breaking the rules.",
+            "cat": "Movies",
+            "saidby": "Harry Potter and the Order of the Phoenix"
+        },
+        {
+            "con": "That’s my secret, Captain: I’m always angry.",
+            "cat": "Movies",
+            "saidby": "Marvel’s The Avengers"
+        },
+
+        {
+            "con": "This … is … SPARTA!",
+            "cat": "Movies",
+            "saidby": "300"
+        }, {
+            "con": "To infinity, and beyond!",
+            "cat": "Movies",
+            "saidby": "Toy Story"
+        },
+        {
+            "con": "We’ve all got both light and darkness inside us. What matters is the part we choose to act on. That’s who we really are.",
+            "cat": "Movies",
+            "saidby": "Harry Potter and the Order of the Phoenix"
+        },
+        {
+            "con": "What I do is not up to you.",
+            "cat": "Movies",
+            "saidby": "Wonder Woman"
+        },
+        {
+            "con": "Why so serious?",
+            "cat": "Movies",
+            "saidby": "The Dark Knight"
+        },
+        {
+            "con": "Witness me!",
+            "cat": "Movies",
+            "saidby": "Mad Max: Fury Road"
+        },
+        {
+            "con": "YOU SHALL NOT PASS!",
+            "cat": "Movies",
+            "saidby": "The Lord of the Rings: The Fellowship of the Ring"
+        },
+        {
+            "con": "That's what I do, I drink and I know things.",
+            "cat": "Series",
+            "saidby": "Tyrion Lanister (Game of Thrones)"
+        },
+        {
+            "con": "We want to be sedated. Because it's not to pretend, because we're cowards. Fuck society.",
+            "cat": "Series",
+            "saidby": "Elliot Alderson (Mr Robot)"
+        },
+        {
+            "con": "You know what I like about people? They stack so well.",
+            "cat": "Series",
+            "saidby": "FRANK UNDERWOOD (HOUSE OF CARDS)"
+        }, {
+            "con": "The only time a man can be brave is when he's afraid.",
+            "cat": "Series",
+            "saidby": "NED STARK (GAME OF THRONES)"
+        },
+        {
+            "con": "The purpose of war is peace.",
+            "cat": "Series",
+            "saidby": "PABLO ESCOBAR (NARCOS)"
+        },
+        {
+            "con": "I'm not in the meth business I'm in the empire business.",
+            "cat": "Series",
+            "saidby": "WALTER WHITE (BREAKING BAD)"
+        },
+        {
+            "con": "Mozart, Beethoven and Chopin never died. They simply became music.",
+            "cat": "Series",
+            "saidby": "FORD (WESTWORLD)"
+        },
+        {
+            "con": "You come at the King, you best not miss. ",
+            "cat": "Series",
+            "saidby": "OMAR LITTLE (THE WIRE)"
+        },
+        {
+            "con": "I don't have dreams, I have goals.",
+            "cat": "Series",
+            "saidby": "HARVEY SPECTER (SUITS)"
+        },
+        {
+            "con": "Shut up Anderson! You lower the IQ of the whole street.",
+            "cat": "Series",
+            "saidby": "SHERLOCK HOLMES (SHERLOCK)"
+        },
+        {
+            "con": "Death created time to grow the things it could kill. ",
+            "cat": "Series",
+            "saidby": "RUST COHLE (TRUE DETECTIVE)"
+        },
+        {
+            "con": "In astronomy, the word 'revolution means a celestial object that comes full circle. It's funny 'cos on earth it means change. ",
+            "cat": "Series",
+            "saidby": "MIKE MILLIGAN (FARGO)"
+        },
+        {
+            "con": "Mornings are for coffee and contemplation.",
+            "cat": "Series",
+            "saidby": "CHIEF HOPPER (STRANGER THINGS)"
+        },
+        {
+            "con": "Everyone's a whore, Grace. We just sell different parts of ourselves.",
+            "cat": "Series",
+            "saidby": "TOMMY SHELBY (PEAKY BLINDERS)"
+        },
+
+        {
+            "con": "Sometimes I'll start a sentence and I don't even know where it's going. I hope I find it along the way. ",
+            "cat": "Series",
+            "saidby": "MICHAEL SCOTT (THE OFFICE)"
+        },
+        {
+            "con": "I am the ill intent who set upon the traveler on a road that he should not have been on.",
+            "cat": "Series",
+            "saidby": "WILSON FISK (DAREDEVIL)"
+        },
+        {
+            "con": "It's a person. A doctor pronounces her dead, not the news. ",
+            "cat": "Series",
+            "saidby": "DON KEEFER (NEWSROOM)"
+        },
+        {
+            "con": "You can't be half a gangster.",
+            "cat": "Series",
+            "saidby": "NUCKY THOMPSON (BOARDWALK EMPIRE)"
+        },
+        {
+            "con": "I call eggs 'pre-birds or 'future birds'.",
+            "cat": "Series",
+            "saidby": "TOM HAVERFORD (PARKS AND RECREATION)"
+        },
+        {
+            "con": "Mrs Landingham, what's next? ",
+            "cat": "Series",
+            "saidby": "PRESIDENT JOSIAH BARTLETT (THE WEST WING)"
+        },
+        {
+            "con": "I let you know me, see me. I gave you a rare gift.",
+            "cat": "Series",
+            "saidby": "DR HANNIBAL LECTER (HANNIBAL)"
+        },
+        {
+            "con": "We're gonna walk in there with three foot cocks, covered in Elvis dust.",
+            "cat": "Series",
+            "saidby": "ERLICH BACHMAN (SILICON VALLEY)"
+        },
+        {
+            "con": "What you calt 'love' was invented by guys like me to sell Nylon.",
+            "cat": "Series",
+            "saidby": "DON DRAPER (MAD MEN)"
+        },
+        {
+            "con": "Our first assignment is a documentary. They're like a movie, but with ugly people",
+            "cat": "Series",
+            "saidby": "ABED (COMMUNITY)"
+        },
+
+        {
+            "con": "We were on a break.",
+            "cat": "Series",
+            "saidby": "ROSS GELLER (FRIENDS)"
+        }
+    ]
+}

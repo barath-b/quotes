@@ -5,140 +5,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Quotes</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
-
 </head>
-<style>
-    .grid-item {
-        transition: all 120ms ease;
-        margin: 3%;
-    }
-    
-    .column {
-        float: left;
-        transition: all 120ms ease;
-    }
-    
-    .size-1of4 {
-        width: 25%;
-    }
-    
-    .size-1of3 {
-        width: 33.333%;
-    }
-    
-    .size-1of2 {
-        width: 50%;
-    }
-    /* Configurate salvattore with media queries */
-    
-    @media screen and (max-width: 450px) {
-        #grid[data-columns]::before {
-            content: '1 .column';
-        }
-    }
-    
-    @media screen and (min-width: 451px) and (max-width: 700px) {
-        #grid[data-columns]::before {
-            content: '2 .column.size-1of2';
-        }
-    }
-    
-    @media screen and (min-width: 701px) and (max-width: 850px) {
-        #grid[data-columns]::before {
-            content: '3 .column.size-1of3';
-        }
-    }
-    
-    @media screen and (min-width: 851px) {
-        #grid[data-columns]::before {
-            content: '4 .column.size-1of4';
-        }
-    }
-</style>
 
 <body>
-    <div class="grid" id="grid" data-columns>
-        <!--<div class="grid-item">
-            <blockquote class="blockquote">
-                <p id="a" class="mb-0">Be yourself; everyone else is already taken.</p>
-                <footer class="blockquote-footer"> Oscar Wilde</footer>
-                <button class="btn" data-clipboard-action="copy" data-clipboard-target="#a">Copy</button>
-            </blockquote>
-            <div class="tags">
-                <p>Tags : <em>life</em></p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <blockquote class="blockquote">
-                <p class="mb-0">Life is 10% what happens to you and 90% how you react to it.</p>
-                <footer class="blockquote-footer"> Oscar Wilde</footer>
-            </blockquote>
-            <div class="tags">
-                <p>Tags : <em>life</em></p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <blockquote class="blockquote">
-                <p class="mb-0">One of the most beautiful qualities of true friendship is to understand and to be understood.</p>
-                <footer class="blockquote-footer"> Oscar Wilde</footer>
-            </blockquote>
-            <div class="tags">
-                <p>Tags : <em>life</em></p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <blockquote class="blockquote">
-                <p class="mb-0">Be yourself; everyone else is already taken.</p>
-                <footer class="blockquote-footer"> Oscar Wilde</footer>
-            </blockquote>
-            <div class="tags">
-                <p>Tags : <em>life</em></p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <blockquote class="blockquote">
-                <p class="mb-0">Be yourself; everyone else is already taken.</p>
-                <footer class="blockquote-footer"> Oscar Wilde</footer>
-            </blockquote>
-            <div class="tags">
-                <p>Tags : <em>life</em></p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <blockquote class="blockquote">
-                <p class="mb-0">Life is 10% what happens to you and 90% how you react to it.</p>
-                <footer class="blockquote-footer"> Oscar Wilde</footer>
-            </blockquote>
-            <div class="tags">
-                <p>Tags : <em>life</em></p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <blockquote class="blockquote">
-                <p class="mb-0">One of the most beautiful qualities of true friendship is to understand and to be understood.</p>
-                <footer class="blockquote-footer"> Oscar Wilde</footer>
-            </blockquote>
-            <div class="tags">
-                <p>Tags : <em>life</em></p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <blockquote class="blockquote">
-                <p class="mb-0">Be yourself; everyone else is already taken.</p>
-                <footer class="blockquote-footer"> Oscar Wilde</footer>
-            </blockquote>
-            <div class="tags">
-                <p>Tags : <em>life</em></p>
-            </div>
-        </div> -->
+    <script>
+        // This is called with the results from from FB.getLoginStatus().
+        function statusChangeCallback(response) {
+            console.log('statusChangeCallback');
+            console.log(response);
+            // The response object is returned with a status field that lets the
+            // app know the current login status of the person.
+            // Full docs on the response object can be found in the documentation
+            // for FB.getLoginStatus().
+            if (response.status === 'connected') {
+                // Logged into your app and Facebook.
+                testAPI();
+            } else {
+                // The person is not logged into your app or we are unable to tell.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this app.';
+            }
+        }
 
-    </div>
+        // This function is called when someone finishes with the Login
+        // Button.  See the onlogin handler attached to it in the sample
+        // code below.
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '269171357278853',
+                cookie: true,
+                xfbml: true,
+                version: 'v3.2'
+            });
+
+            // Now that we've initialized the JavaScript SDK, we call 
+            // FB.getLoginStatus().  This function gets the state of the
+            // person visiting this page and can return one of three states to
+            // the callback you provide.  They can be:
+            //
+            // 1. Logged into your app ('connected')
+            // 2. Logged into Facebook, but not your app ('not_authorized')
+            // 3. Not logged into Facebook and can't tell if they are logged into
+            //    your app or not.
+            //
+            // These three cases are handled in the callback function.
+
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+
+        };
+
+        // Load the SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        // Here we run a very simple test of the Graph API after login is
+        // successful.  See statusChangeCallback() for when this call is made.
+        function testAPI() {
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function(response) {
+                console.log('Successful login for: ' + response.name);
+                document.getElementById('status').innerHTML = 'Welcome, ' + response.name + '!';
+            });
+        }
+    </script>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Quotes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="movies.html">Movie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="series.html">Series</a>
+                </li>
+                <li class="nav-item">
+                    <fb:login-button id="fb" class="nav-link" scope="public_profile,email" onlogin="checkLoginState();">
+                    </fb:login-button>
+                    <div id="status">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1 class="display-4 head">All Quotes</h1>
+    <div class="grid" id="grid" data-columns></div>
+
     <script src="js/salva.js"></script>
     <script src="js/clipboard.js"></script>
 </body>
@@ -148,16 +123,17 @@
     var $con = null;
     var grid = document.querySelector('#grid');
     $(document).ready(function() {
-        $.getJSON("data.json", function(data) {
+        $.getJSON("quotes.json", function(data) {
             $.each(data, function(key, value) {
+                shuffle(value);
                 for (let i = 0; i < value.length; i++) {
-                    content += '<div class="grid-item"><div>' +
+                    content += '<div class="grid-item"><div class="item">' +
                         '<blockquote class="blockquote">' +
                         '<p class="mb-0">' + value[i].con + '</p>' +
                         '<footer class="blockquote-footer">' + value[i].saidby + '</footer>' +
-                        '<button class="btn" data-clipboard-action="copy" data-clipboard-text=="#' + value[i].con + '">Copy</button></blockquote>' +
-                        '<div class="tags">' +
-                        '<p>Tags : <em>' + 'life' + '</em></p></div></div></div>';
+                        '<div class="cat"><p>Category : <em>' + value[i].cat + '</em></p></div>' +
+                        '<button class = "btn btn-outline-primary" data-clipboard-action ="copy" data-clipboard-text= "#' +
+                        value[i].con + '">Copy</button></blockquote></div></div>';
                 }
                 $('#grid').append(content);
                 $con = $(content);
@@ -171,6 +147,26 @@
             }
         });
     });
+
+    function shuffle(array) {
+        var currentIndex = array.length,
+            temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
 </script>
 
 </html>
