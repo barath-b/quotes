@@ -86,6 +86,7 @@
                 console.log('Successful login for: ' + response.name);
                 document.getElementById('fb').style.display = 'none';
                 document.getElementById('status').innerHTML = 'Welcome, ' + response.name + '!';
+                document.getElementById('status').style.display = 'block';
             });
         }
     </script>
@@ -106,8 +107,7 @@
                 <li class="nav-item">
                     <fb:login-button id="fb" class="nav-link" scope="public_profile,email" onlogin="checkLoginState();">
                     </fb:login-button>
-                    <div id="status">
-                    </div>
+                    <p id="status" class="nav-link"></p>
                 </li>
             </ul>
         </div>
